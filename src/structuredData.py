@@ -214,7 +214,7 @@ def uploadFiles():
 @app.route("/featureImportance", methods=['GET', 'POST'])
 def feature_importance_model():
     # insert code for model here
-    dataDict = {'colNo': ["col1", "col2", "col3", "col4"], 'importanceLvl': [100, 15, 15, 20]}
+    dataDict = {'colNo': ["col1", "col2", "col3", "col4"], 'importanceLvl': [10, 15, 15, 20]}
     df = pd.DataFrame(data=dataDict)
 
     model_result = df.to_dict('records')

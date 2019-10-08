@@ -48,12 +48,12 @@
   grid-area: 2 / 1 / span 8 / span 4;
 }
 
-.searchQuery {
+.callFlask {
   grid-area: 10 / 1 / span 2 / span 4;
 }
 
-.callFlask {
-  grid-area: 12 / 1 / span 2 / span 4;
+.searchQuery {
+  grid-area: 14 / 1 / span 2 / span 4;
 }
 
 .testTable {

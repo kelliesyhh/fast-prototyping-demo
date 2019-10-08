@@ -51,10 +51,13 @@ class Summary extends React.Component {
         <div className="content">
           <FancyBorder color="white">
             <TextFormat header3="Speech Data"/>
+            <p/>
             <RiskChart riskArray={SpeechDataArr}/>
             <TextFormat header3="Structured Data"/>
+            <p/>
             <RiskChart riskArray={StructuredDataArr}/>
             <TextFormat header3="Summary"/>
+            <p/>
             <RiskChart riskArray={CombinedArr}/>
           </FancyBorder>
         </div>

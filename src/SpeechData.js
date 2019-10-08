@@ -140,25 +140,16 @@ class SpeechData extends React.Component {
         <div className="dialogueForm">
           <FancyBorder color="white">
             <Row type="flex">
+              <TextFormat header3="Dialogue" />
+            </Row>
+            <p />
+            <Row type="flex">
               <TextArea
                 name="dialogue"
                 placeholder="Enter Dialogue"
                 onChange={this.handleChange}
-                autosize={{minRows: 14, maxRows: 28}}
+                autosize={{minRows: 12, maxRows: 25}}
                 value={this.state.dialogue}
-              />
-            </Row>
-          </FancyBorder>
-        </div>
-        <br /><br />
-        <div className="searchQuery">
-          <FancyBorder color="white">
-            <Row type="flex">
-              <TextArea
-                name="search"
-                placeholder="Enter Search Query"
-                onChange={this.handleSearch}
-                value={this.state.search}
               />
             </Row>
           </FancyBorder>
@@ -196,17 +187,34 @@ class SpeechData extends React.Component {
                   </Button>
                 </Popconfirm>
               </Col>
-              <Col span={3}>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  onClick={this.handleSearchFunction}
-                  icon="search"
-                >
-                  Search
-                </Button>
-              </Col>
             </Row>
+          </FancyBorder>
+        </div>
+        <br /><br />
+        <div className="searchQuery">
+          <FancyBorder color="white">
+            <Row type="flex">
+              <TextFormat header3="Search" />
+            </Row><p />
+            <Row type="flex">
+              <TextArea
+                name="search"
+                placeholder="Enter Search Query"
+                onChange={this.handleSearch}
+                value={this.state.search}
+              />
+            </Row>
+            <br />
+            <Col span={3}>
+              <Button
+                type="primary"
+                htmlType="submit"
+                onClick={this.handleSearchFunction}
+                icon="search"
+              >
+                Search
+              </Button>
+            </Col>
             <br /><br />
             <Row type="flex">
               <TextFormat normalText="Sentence: " />{sentenceVisibility}
@@ -218,13 +226,13 @@ class SpeechData extends React.Component {
           <FancyBorder color="white">
             <Row type="flex">
               <Col span={8}>
-                <TextFormat header3="Select Menu for Audio Examples" />
+                <TextFormat header3="Select Menu for Audio Examples" /> <p />
               </Col>
               <Col span={8}>
-                <TextFormat header3="Play the File" />
+                <TextFormat header3="Play the File" /> <p />
               </Col>
               <Col span={8}>
-                <TextFormat header3="Process and Output" />
+                <TextFormat header3="Process and Output" /> <p />
               </Col>
             </Row>
             <Row type="flex">

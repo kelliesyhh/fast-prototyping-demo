@@ -525,7 +525,7 @@ class App extends React.Component {
                 </Popconfirm>
               </Col>
               <Col span={3}>
-                <Button type="primary" onClick={this.handleFeature}>
+                <Button type="default" onClick={this.handleFeature}>
                   Show Feature Importance
                 </Button>
               </Col>
