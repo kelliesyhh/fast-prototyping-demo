@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './App.css';
+import './StructuredData.css';
 import {
   Icon,
   Input,
@@ -105,7 +105,7 @@ class App extends React.Component {
       RiskTableVisibility = (
         <FancyBorder color="white">
           <Row>
-            <TextFormat header2="Risk Table" />
+            <TextFormat header3="Risk Table" />
             <TableComponent riskArray={this.state.riskArray1} />
           </Row>
         </FancyBorder>
@@ -113,7 +113,7 @@ class App extends React.Component {
       RiskChartVisibility = (
         <FancyBorder color="white">
           <Row>
-            <TextFormat header2="Risk Chart" />
+            <TextFormat header3="Risk Chart" />
             <RiskChart riskArray={this.state.riskArray1} />
           </Row>
         </FancyBorder>
@@ -144,7 +144,7 @@ class App extends React.Component {
       UploadResults = (
         <FancyBorder color="white">
           <div>
-            <TextFormat header2="Properties of File(s)" />
+            <TextFormat header3="Properties of File(s)" />
             <TextFormat normalText={fileStr} />
             <TextFormat normalText={fileDirStr} />
             <TextFormat normalText={fileArr} />
@@ -156,46 +156,55 @@ class App extends React.Component {
       console.log (maxImptLoc);
       if (maxImptLoc == 'col1') {
         FeatureArrayVisibility = (
-          <Row type="flex">
-            <Col span={3}>
-              <div className="highlightBox">
-                <p>Most Important Feature ^</p>
-              </div>
-            </Col>
-          </Row>
+          <FancyBorder color="specialwhite">
+            <Row type="flex">
+              <Col span={1}/>
+              <Col span={2}>
+                <div className="highlightBox">
+                  <p>Most Important Feature: {maxImptLoc}</p>
+                </div>
+              </Col>
+            </Row>
+          </FancyBorder>
         );
       } else if (maxImptLoc == 'col2') {
         FeatureArrayVisibility = (
-          <Row type="flex">
-            <Col span={3} />
-            <Col span={3}>
-              <div className="highlightBox">
-                <p>Most Important Feature ^</p>
-              </div>
-            </Col>
-          </Row>
+          <FancyBorder color="specialwhite">
+            <Row type="flex">
+              <Col span={3} />
+              <Col span={2}>
+                <div className="highlightBox">
+                  <p>Most Important Feature: {maxImptLoc}</p>
+                </div>
+              </Col>
+            </Row>
+          </FancyBorder>
         );
       } else if (maxImptLoc == 'col3') {
         FeatureArrayVisibility = (
-          <Row type="flex">
-            <Col span={5} />
-            <Col span={3}>
-              <div className="highlightBox">
-                <p>Most Important Feature ^</p>
-              </div>
-            </Col>
-          </Row>
+          <FancyBorder color="specialwhite">
+            <Row type="flex">
+              <Col span={6} />
+              <Col span={2}>
+                <div className="highlightBox">
+                  <p>Most Important Feature: {maxImptLoc}</p>
+                </div>
+              </Col>
+            </Row>
+          </FancyBorder>
         );
       } else if (maxImptLoc == 'col4') {
         FeatureArrayVisibility = (
-          <Row type="flex">
-            <Col span={7} />
-            <Col span={3}>
-              <div className="highlightBox">
-                <p>Most Important Feature ^</p>
-              </div>
-            </Col>
-          </Row>
+          <FancyBorder color="specialwhite">
+            <Row type="flex">
+              <Col span={8} />
+              <Col span={2}>
+                <div className="highlightBox">
+                  <p>Most Important Feature: {maxImptLoc}</p>
+                </div>
+              </Col>
+            </Row>
+          </FancyBorder>
         );
       }
     }
@@ -204,12 +213,13 @@ class App extends React.Component {
       <div className="grid-container">
         <div className="topHeader">
           <FancyBorder color="white">
-            <TextFormat header1="Fast Prototyping - Structured Data" />
+            <TextFormat header2="Structured Data" />
           </FancyBorder>
         </div>
+        <br /><br />
         <div className="timeSeriesInput1">
           <FancyBorder color="white">
-            <Row type="flex"> <TextFormat header2="Dataframe 1" /> </Row>
+            <Row type="flex"> <TextFormat header3="Dataframe 1" /> </Row>
             <p />
             <Row type="flex">
               <Col span={1}>t1</Col>
@@ -344,7 +354,7 @@ class App extends React.Component {
         <br /><br />
         <div className="timeSeriesInput2">
           <FancyBorder color="white">
-            <Row type="flex"> <TextFormat header2="Dataframe 2" /> </Row>
+            <Row type="flex"> <TextFormat header3="Dataframe 2" /> </Row>
             <p />
             <Row type="flex">
               <Col span={1}>t1</Col>
@@ -482,6 +492,7 @@ class App extends React.Component {
             {FeatureArrayVisibility}
           </FancyBorder>
         </div>
+        <br /><br />
         <div className="callFlask">
           <FancyBorder color="white">
             <p />

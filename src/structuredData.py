@@ -7,7 +7,6 @@ import os
 import pandas as pd
 from werkzeug.contrib.cache import SimpleCache, MemcachedCache
 from werkzeug.utils import secure_filename
-import pyrebase
 from firebase import Firebase
 
 app = Flask(__name__)
@@ -15,7 +14,6 @@ cors = CORS(app)
 
 UPLOAD_FOLDER = os.getcwd()
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv'])
-
 
 class Cache(object):
     cache = SimpleCache(threshold=1000, default_timeout=100)
@@ -216,7 +214,7 @@ def uploadFiles():
 @app.route("/featureImportance", methods=['GET', 'POST'])
 def feature_importance_model():
     # insert code for model here
-    dataDict = {'colNo': ["col1", "col2", "col3", "col4"], 'importanceLvl': [10, 5, 10, 15]}
+    dataDict = {'colNo': ["col1", "col2", "col3", "col4"], 'importanceLvl': [100, 15, 15, 20]}
     df = pd.DataFrame(data=dataDict)
 
     model_result = df.to_dict('records')

@@ -1,12 +1,16 @@
 @import '~antd/dist/antd.css';
 
 .FancyBorder {
-  padding: 5px 5px;
   border: 5px solid;
 }
 
 .FancyBorder-white {
   border-color: white;
+}
+
+.FancyBorder-specialwhite {  
+  border-color: white;
+  border-left-width: 0ch;
 }
 
 .FancyBorder-black {
@@ -52,7 +56,6 @@
   text-align: left;
   padding: 0px 0px;
   font-size: 15px;
-  align-content: flex-start;
 }
 
 .tableCol {
@@ -97,11 +100,11 @@
 }
 
 .timeSeriesInput1 {
-  grid-area: 2 / 1 / span 8 / span 4;
+  grid-area: 2 / 1 / span 8 / span 2;
 }
 
 .timeSeriesInput2 {
-  grid-area: 2 / 3 / span 8 / span 4;
+  grid-area: 2 / 3 / span 8 / span 2;
 }
 
 .featureImportance {
@@ -133,8 +136,9 @@
 }
 
 .highlightBox {
-  background-color: slategray;
+  background-color: yellow;
   color: black;
+  text-align: center;
 }
 
 .App {
