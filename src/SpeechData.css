@@ -1,0 +1,145 @@
+@import '~antd/dist/antd.css';
+
+.FancyBorder {
+  padding: 5px 5px;
+  border: 5px solid;
+}
+
+.FancyBorder-white {
+  border-color: white;
+}
+
+.FancyBorder-black {
+  border-color: black;
+}
+
+.TextFormat-header1 { 
+  margin: 0px; 
+  white-space: 0px;
+}
+
+.TextFormat-header2 {
+  margin: 0px;
+  white-space: 0px;
+}
+
+.TextFormat-header3 {
+  margin: 0px;
+  white-space: 0px;
+}
+
+.TextFormat-normalText { 
+  margin: 0px;
+  white-space: 0px;
+  font-size: 14px;
+ }
+
+ .TextFormat-credits {
+  margin: 0px;
+  white-space: 0px;
+  font-size: smaller;
+ }
+
+.topHeader { 
+  grid-area: 1 / 1 / span 1 / span 4;
+}
+
+.dialogueForm { 
+  grid-area: 2 / 1 / span 8 / span 4;
+}
+
+.searchQuery {
+  grid-area: 10 / 1 / span 2 / span 4;
+}
+
+.callFlask {
+  grid-area: 12 / 1 / span 2 / span 4;
+}
+
+.testTable {
+  grid-area: 14 / 1 / span 2 / span 4;
+}
+
+.audioPlayer {
+  grid-area: 16 / 1 / span 4 / span 4
+}
+
+.credits {
+  grid-area: 20 / 1 / span 1 / span 4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: white;
+  padding: 3px;
+}
+
+.grid-container > div {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: left;
+  padding: 0px 0px;
+  font-size: 15px;
+}
+
+.tableCol {
+  padding: 10px 5px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.rightTableCol {
+  padding: 10px 5px;
+  border-top: 1px solid black;
+}
+
+.headerCol {
+  border-right: 1px solid black;
+  padding: 15px 0px;
+}
+
+.rightHeaderCol {
+  padding: 15px 0px;
+}
+
+.tableHeaders {
+  font-weight: bold;
+  background-color: #e6f5ff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid black;
+  border-bottom: none;
+  font-size: 125%;
+}
+
+.tableBody {  
+  border: 1px solid black;
+  border-top: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.tableBody > .noSymptomHeader {
+  font-size: 125%;
+  font-weight: bold;
+  background-color: #e6f5ff;
+  border-spacing: 0px;
+  white-space: 0px;
+  padding: 15px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.tableBody > .normalRows {
+  background-color: white;
+  white-space: 0px;
+}
+
+.tableBody > .noSymptomRow {
+  background-color: white;
+  white-space: 0px;
+}
+
+.speechData {
+  text-align: center;
+}
