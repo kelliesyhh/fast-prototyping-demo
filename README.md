@@ -117,6 +117,12 @@ cd src
 python speechData.py
 ```
 
+The code for the model can be added in 
+~~~~{.python}
+def generate_result_from_model()
+~~~~
+in speechData.py
+
 ## Structured Data Component
 The following instructions are for the structured data component.
 
