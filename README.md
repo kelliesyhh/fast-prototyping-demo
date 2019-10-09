@@ -37,6 +37,7 @@ The following instructions are for the speech data component.
 * Users can clear dialogue / transcription if needed
 * Loading animation shown while waiting for processing to be done
 * Allow users to play audio files from a dropdown list
+* Allow users to search for a specific word and display the sentence in which the word appears in
 
 ### Installation
 Before downloading or installing anything, first install
@@ -127,6 +128,7 @@ The following instructions are for the structured data component.
 * Loading animation shown while waiting for processing to be done
 * Allow users to upload files from local directory
 * File properties will be displayed
+* Highlight most important column based on a dataframe returned by the backend
 
 ### Installation
 Before downloading or installing anything, first install
