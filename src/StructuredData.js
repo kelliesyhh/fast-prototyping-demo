@@ -154,7 +154,9 @@ class App extends React.Component {
     }
     if (maxImptReturned === true) {
       console.log (maxImptLoc);
-      if (maxImptLoc == 'col1') {
+      // for this demo, the feature importance only works for dataframe 1. to use it on
+      // dataframe 2, you would probably have to edit the col span accordingly
+      if (maxImptLoc === 'col1') {
         FeatureArrayVisibility = (
           <FancyBorder color="specialwhite">
             <Row type="flex">
@@ -167,7 +169,7 @@ class App extends React.Component {
             </Row>
           </FancyBorder>
         );
-      } else if (maxImptLoc == 'col2') {
+      } else if (maxImptLoc === 'col2') {
         FeatureArrayVisibility = (
           <FancyBorder color="specialwhite">
             <Row type="flex">
@@ -180,7 +182,7 @@ class App extends React.Component {
             </Row>
           </FancyBorder>
         );
-      } else if (maxImptLoc == 'col3') {
+      } else if (maxImptLoc === 'col3') {
         FeatureArrayVisibility = (
           <FancyBorder color="specialwhite">
             <Row type="flex">
@@ -193,7 +195,7 @@ class App extends React.Component {
             </Row>
           </FancyBorder>
         );
-      } else if (maxImptLoc == 'col4') {
+      } else if (maxImptLoc === 'col4') {
         FeatureArrayVisibility = (
           <FancyBorder color="specialwhite">
             <Row type="flex">
@@ -888,9 +890,11 @@ class App extends React.Component {
           );
           console.log (maxImpt);
           obj = featureArray.find (function (o) {
-            return o.importanceLvl == maxImpt;
+            return o.importanceLvl === maxImpt;
           });
           console.log (obj);
+          // the maxImptLoc is based on the values returned in structuredData.py,
+          // for this demo a dictionary with 4 cols and 4 values are returned
           maxImptLoc = obj.colNo;
           console.log (maxImptLoc);
         });

@@ -55,9 +55,15 @@
 .TextFormat-normalText { 
   margin: 0px;
   white-space: 0px;
-  font-size: smaller;
+  font-size: 14px;
  }
  
+ .TextFormat-credits {
+  margin: 0px;
+  white-space: 0px;
+  font-size: smaller;
+ }
+
  .title { 
   grid-area: 1 / 1 / span 1 / span 4;
 }

@@ -58,6 +58,7 @@ def postToFlask():
     data = data.decode("utf-8")
     Cache.set(value=data, key=11)
     print(data)
+    # this is needed because the data from the frontend is received as a string on the backend
     df1, df2 = data.split("]],[[")
     df1row1, df1row2, df1row3, df1row4 = df1.split("],[")
     remove, df1row1 = df1row1.split("[[[")

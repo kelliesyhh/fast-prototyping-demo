@@ -65,55 +65,30 @@ def generate_result_from_model(text_input):
 def postSearch():
   data = request.data
   decoded = data.decode("utf-8")
-  id = 2
-  Cache.set(value = decoded, key = id)
+  Cache.set(value = decoded, key = 2)
   print(decoded)
-  
-  dialogue = Cache.get(key=1)
-  print(dialogue)
-  delete, dialogue = dialogue.split(':"')
-  dialogue, delete = dialogue.split('"}')
-  print(dialogue)
-  Cache.set(value = dialogue, key = 1)
-  search = Cache.get(key=2)
-  print(search)
-  delete, search = search.split(':"')
-  search, delete = search.split('"}')
-  print(search)
-  Cache.set(value = search, key = 2)
-
   return decoded
 
 @app.route("/getSearch", methods=['GET'])
-def getSearch(): 
+def getSearch():  
   dialogue = Cache.get(key=1)
-  print(dialogue) 
+  delete, dialogue = dialogue.split(':"')
+  dialogue, delete = dialogue.split('"}')
   search = Cache.get(key=2)
-  print(search)
-  result = dialogue.find(search)  
-  print ("Substring found at index: ", result ) 
-  if (result != -1): 
-      print ("Contains given substring ") 
-  else: 
-      print ("Doesn't contains given substring") 
+  delete, search = search.split(':"')
+  search, delete = search.split('"}')
+  print("dialogue: ", dialogue) 
+  print("search: ", search)
 
-  fsLoc = dialogue.find(".")
-  print(fsLoc)
-
-  for i in range(0, result):
-    if result != 0:
-      fsLoc2 = 0
-
-  if result < fsLoc:
-    sentence = dialogue[fsLoc2:fsLoc]
-    print("Running result < fsLoc")
-
-  elif result > fsLoc:
-    sentence = dialogue[fsLoc + 2: fsLoc + result + 1]
-    print("Running result > fsLoc")
-      
-  print(sentence)
-  return sentence
+  sentenceList = dialogue.split(".")
+  print("sentenceList: ", sentenceList)
+  print("len(sentenceList): ", len(sentenceList))
+  for i in range(0, len(sentenceList), +1):
+    if search in sentenceList[i]:
+      print("search: ", search)
+      sentence = sentenceList[i]
+      print("sentence: ", sentence)
+      return sentence
 
 # running web app in local machine
 if __name__ == '__main__':
